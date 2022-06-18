@@ -16,15 +16,7 @@ services:
     restart: always
     depends_on:
       - reverseproxy
-  apache:
-    image: apache_image
-    container_name: apache_container
-    build: ./apache
-    ports:
-      - 80
-    restart: always
-    depends_on:
-      - reverseproxy
+ 
   node:
     image: node_image
     container_name: node_container
